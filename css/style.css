@@ -441,7 +441,7 @@ body {
 	border:none;
 }
 .categories li a:hover{
-	color:#e44f2b;
+	color:#AE32B5;
 }	
 .buters-guide{
 	margin-top:2em;
@@ -471,16 +471,16 @@ body {
 .banner-desc h4{
 	display:block;
 	font-size:25px;
-	color:#e44f2b;
+	color:#AE32B5;
 	margin-bottom:10px;
 }
 .banner-desc a{
-	background:#e44f2b !important;
+	background:#A6A6A6 !important;
 	padding:5px 15px !important;
 	display:inline-block !important;
 }
 .banner-desc a:hover{
-	background:#D03D1A !important;
+	background:#AE32B5 !important;
 }
 .add-banner2{
 	background:url("../images/banner-bg.png") repeat-x;
