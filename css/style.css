@@ -1249,7 +1249,7 @@ body {
 }
 .contact-form input[type="text"]:focus, .contact-form textarea:focus {
 	color:#555;
-	border-color:#C1C1C1;
+	border-color:#AE32B5;
 }
 .contact-form textarea {
 	resize: none;
@@ -1259,7 +1259,7 @@ body {
 	font-size:16px;
 	padding:10px 25px;
 	font-family: 'Ubuntu Condensed', sans-serif;
-	background:#e44f2b;
+	background:#222121;
 	color: #FFF;
 	border:none;
 	text-decoration: none;
@@ -1274,7 +1274,7 @@ body {
 	position:relative;
 }
 .mybutton:hover {
-	background: #292929;
+	background: #AE32B5;
 }
 .map {
 	margin-top:1em;
