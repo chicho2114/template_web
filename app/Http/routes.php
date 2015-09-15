@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-/*
-Route::get('/prueba', function () {
-    return view('prueba', ['name' => 'Argenis']);
-});*/
+Route::get('/', 'FrontController@index');
+
+Route::get('/contacto', 'FrontController@contacto');
+Route::get('/preview', 'FrontController@preview');
+Route::get('/contenido', 'FrontController@contenido');
+
+//rutas mas generales
+Route::resource('productos', 'ProductosController');
