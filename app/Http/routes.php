@@ -17,5 +17,7 @@ Route::get('/contacto', 'FrontController@contacto');
 Route::get('/preview', 'FrontController@preview');
 Route::get('/contenido', 'FrontController@contenido');
 
+Route::get('/prueba', 'FrontController@prueba');
+
 //rutas mas generales
 Route::resource('productos', 'ProductosController');

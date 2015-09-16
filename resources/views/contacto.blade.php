@@ -1,9 +1,3 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <head>
 <title>Free Ecomm Template Website Template | Contact :: w3layouts</title>
@@ -37,7 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   		    	<a class="toggleMenu" href="#">Menu</a>
 					<ul class="nav">
 						<li>
-							<a href="index.html">Home</a>
+							<a href={{URL::to('/')}}>Home</a>
 						</li>
 						<li  class="test">
 							<a href="index.html">Appliances</a>
@@ -204,7 +198,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</ul>
 						</li>
 						<li>
-							<a href="#">Contact Us</a>
+							<a href={{URL::to('/contacto')}}>Contact Us</a>
 						</li>
 					</ul>
 					 <span class="left-ribbon"> </span> 

@@ -203,7 +203,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</ul>
 						</li>
 						<li>
-							<a href="contact.html">Contactanos</a>
+							<a href={{URL::to('/contacto')}}>Contactanos</a>
 						</li>
 					</ul>
 					 <span class="left-ribbon"> </span> 
@@ -255,6 +255,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				     </div>  
 				   </div>    		
     	       </div>
+
     	  <div class="content_bottom">
     	    <div class="wrap">
     	    	<div class="content-bottom-left">
@@ -296,8 +297,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     	    	</div>
 
     	    	@yield('content')
-    	    	
-    	    	
+    	    		    	
 		      <div class="clear"></div>
 		   </div>
          </div>

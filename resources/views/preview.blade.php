@@ -51,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   	  		<div class="wrap">
 				<div class="header_top">
 					<div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt="" /></a>
+						<a href={{URL::to('/')}}><img src="images/logo.png" alt="" /></a>
 					</div>
 						<div class="header_top_right">
 							  <div class="search_box">
@@ -68,7 +68,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   		    	<a class="toggleMenu" href="#">Menu</a>
 					<ul class="nav">
 						<li>
-							<a href="index.html">Home</a>
+							<a href={{URL::to('/')}}>Home</a>
 						</li>
 						<li  class="test">
 							<a href="#">Appliances</a>
