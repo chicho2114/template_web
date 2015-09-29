@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['name', 'apellido', 'email', 'password'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -36,4 +36,12 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+
+    //Para cambiar la contraseña cada vez que esta sea cambiada
+    public function setPasswordAttribute($valor){
+        if(!empty($valor)){
+            $this->attributes['password'] = $valor;
+        }
+    }
 }

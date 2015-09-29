@@ -16,7 +16,9 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        return 'Estoy en el index';
+        $products = \Tienda\Producto::All();
+
+        return view('product.index', compact('products'));
     }
 
     /**
@@ -27,7 +29,7 @@ class ProductosController extends Controller
     public function create()
     {
      
-        return 'Estoy en el create';
+        return view('product.create');
     }
 
     /**
@@ -38,8 +40,16 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-        
-        return 'Estoy en el store';
+
+        //'titulo', 'descripcion', 'precio'
+        \Tienda\Producto::create([
+            'titulo' => $request['titulo'],
+            'descripcion' => $request['descripcion'],
+            'precio' => $request['precio'], 
+
+
+            ]);
+        return "Producto registrado con exito";
     }
 
     /**

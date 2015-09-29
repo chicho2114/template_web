@@ -1,0 +1,225 @@
+    1  su
+    2  su gnome-tweak-tool
+    3  sudo gnome-tweak-tool
+    4  su
+    5  symfony new my_project
+    6  ls
+    7  cd my_project/
+    8  ls
+    9  php app/console server:run
+   10  nautilus
+   11  su
+   12  dconf-editor 
+   13  nano /home/USUARIO/.config/nautilus/accels
+   14  dconf-editor 
+   15  su
+   16  ls
+   17  fsdisk -l
+   18  fdisk -l
+   19  clear
+   20  ls /dev/sd*
+   21  mkdir /mnt/disco
+   22  ls
+   23  mkdir /mnt
+   24  ls
+   25  fdisk -l
+   26  clear
+   27  su
+   28  nautilus
+   29  su
+   30  ls
+   31  ls -a
+   32  cd /.composer
+   33  cd .composer
+   34  ls
+   35  cd vendor/
+   36  ls
+   37  cd /bin/
+   38  ls
+   39  cd ..
+   40  ls
+   41  cd home/
+   42  ls
+   43  cd argenis/
+   44  ls
+   45  ls -a
+   46  cd .composer/
+   47  ls
+   48  cd vendor/
+   49  ls
+   50  cd laravel/
+   51  ls
+   52  cd ..
+   53  cd..
+   54  cd ..
+   55  ls
+   56  ls -a
+   57  nano .profile 
+   58  nano .bashrc 
+   59  echo $PATH
+   60  ls
+   61  ls -a
+   62  cd .composer/
+   63  ls
+   64  ls vendor/
+   65  cd bin
+   66  cd /bin
+   67  ls
+   68  clear
+   69  ls
+   70  clear
+   71  cd ..
+   72  ls
+   73  cd ..
+   74  ls
+   75  cd home/argenis/
+   76  ls
+   77  ls -a
+   78  clear
+   79  cd .composer/
+   80  ls
+   81  cd vendor/laravel/
+   82  ls
+   83  cd installer/
+   84  ls
+   85  mv laravel /usr/local/bin/laravel
+   86  clear
+   87  su
+   88  laravel -v
+   89  composer -v
+   90  clear
+   91  composer create-project laravel/laravel --prefer-dist laravel
+   92  su
+   93  tokenizer -v
+   94  phptokenizer -v
+   95  history > salida.txt
+   96  su
+   97  laravel prueba
+   98  su
+   99  clear
+  100  composer global require "laravel/installer=~1.1"
+  101  laravel .v
+  102  laravel -v
+  103  laravel new prueba
+  104  su
+  105  git -v
+  106  git -version
+  107  git help
+  108  su
+  109  clear
+  110  php artisan make:migration
+  111  php artisan make:model Producto -m
+  112  php artisan make:model Vendedor -m
+  113  clear
+  114  php artisan list
+  115  php artisan migration
+  116  php artisan migrate
+  117  clear
+  118  php artisan make:controller FrontController
+  119  php artisan serve
+  120  clear
+  121  git add .
+  122  git commit -m "integracion con laravel"
+  123  git push origin master 
+  124  git remote add origin https://github.com/chicho2114/template_web.git
+  125  git push origin master 
+  126  git user.name
+  127  git config user.name
+  128  git config --global user.name "Argenis García"
+  129  git config --global user.email argenis1493@gmail.com
+  130  git config --global user.password "argenis21443181"
+  131  git user.name
+  132  git --help
+  133  clear
+  134  git config --list
+  135  git add .
+  136  git commit -m "Integracion con laravel"
+  137  clear
+  138  git push origin master 
+  139  git config --global user.name "chicho2114"
+  140  clear
+  141  git push origin master 
+  142  git config --list
+  143  su
+  144  clear
+  145  git config --list
+  146  git config --global user.name "Argenis Garcia"
+  147  clear
+  148  git config --list
+  149  git push origin master 
+  150  git pull 
+  151  git pull origin master 
+  152  git add .
+  153  git commit -m "integracion con laravel"
+  154  git push origin master 
+  155  ls
+  156  run update-flashplugin-nonfree 
+  157  run update-flashplugin-nonfree.sh 
+  158  su
+  159  php artisan serve
+  160  git add .
+  161  git commit -m "redireccionamiento entre paginas"
+  162  git push origin master 
+  163  php artisan serve
+  164  composer update
+  165  php artisan serve
+  166  netstat -plnt
+  167  ps -F
+  168  kill -9 3911
+  169  ps -F
+  170  php artisan serve
+  171  history
+  172  clear
+  173  php artisan serve
+  174  su
+  175  cd laravel/
+  176  php artisan serve
+  177  php artisan list
+  178  php artisan make:controller
+  179  php artisan make:controller AdminController
+  180  php artisan serve
+  181  ls
+  182  ls -a
+  183  ls -a
+  184  php artisan make:controller UserController
+  185  php artisan serve
+  186  php artisan list
+  187  php artisan migrate
+  188  php artisan make:migration ProductoController
+  189  php artisan migrate
+  190  php artisan migrate:refresh
+  191  php artisan migrate
+  192  php artisan migrate:refresh
+  193  php artisan migrate
+  194  php artisan make:migration Producto
+  195  php artisan migrate:refresh
+  196  php artisan serve
+  197  php artisan migrate:refresh
+  198  php artisan make:migration Producto
+  199  php artisan migrate:refresh
+  200  clear
+  201  php artisan migrate:refresh
+  202  php artisan list
+  203  php artisan make:migration
+  204  php artisan make:migration User
+  205  php artisan make:migration Pene
+  206  php artisan serve
+  207  php artisan make:migration UserController
+  208  history > comandos.txt
+  209  php artisan make:model Producto -m
+  210  php artisan make:migration --help
+  211  php artisan make:migration --table[=producto] Producto
+  212  php artisan make:migration table=producto Producto
+  213  php artisan make:migration table=producto
+  214  php artisan make:migration producto=CREATE
+  215  php artisan make:migration producto--create
+  216  php artisan make:migration create producto
+  217  php artisan make:migration create -- producto
+  218  php artisan make:migration TABLE
+  219  php artisan queue:table
+  220  php artisan migrate:status
+  221  php artisan migrate
+  222  php artisan make:model Producto -m
+  223  php artisan migrate
+  224  php artisan serve
+  225  history > comandos.txt

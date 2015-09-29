@@ -3,7 +3,7 @@
 <title>Free Ecomm Template Website Template | Contact :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script> 
 <script type="text/javascript" src="js/move-top.js"></script>
@@ -14,11 +14,11 @@
   	  		<div class="wrap">
 				<div class="header_top">
 					<div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt="" /></a>
+						<a href={{URL::to('/')}}><img src="images/logo.png" alt="" /></a>
 					</div>
 						<div class="header_top_right">
 							  <div class="search_box">
-							  	<span>Search</span>
+							  	<span>Buscar:</span>
 					     		<form>
 					     			<input type="text" value=""><input type="submit" value="">
 					     		</form>
@@ -31,7 +31,7 @@
   		    	<a class="toggleMenu" href="#">Menu</a>
 					<ul class="nav">
 						<li>
-							<a href={{URL::to('/')}}>Home</a>
+							<a href={{URL::to('/')}}>Inicio</a>
 						</li>
 						<li  class="test">
 							<a href="index.html">Appliances</a>
@@ -92,16 +92,7 @@
 								</li>
 							</ul>
 						</li>
-						<li>
-							<a href="index.html">Health & Beauty</a>
-							<ul>
-								<li><a href="#">Bath & Skin Care</a></li>
-								<li><a href="#">Health & Safety</a></li>
-								<li><a href="#">Maternity Care</a></li>
-								<li><a href="#">Body Care Combos</a></li>
-								
-							</ul>
-						</li>
+
 						<li>
 							<a href="#">Home & Garden</a>
 							<ul>
@@ -198,7 +189,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href={{URL::to('/contacto')}}>Contact Us</a>
+							<a href={{URL::to('/contacto')}}>Contactanos</a>
 						</li>
 					</ul>
 					 <span class="left-ribbon"> </span> 
@@ -224,7 +215,8 @@
 						    	<div class="clear"></div>
 						    </div>
 						    <div>
-						    	<span><textarea name="userMsg" placeholder="Mensaje" required >Mensaje </textarea></span>
+						    	<!--<input name="userMsg" type="textarea" required placeholder="Mensaje..."  >-->
+						    	<span><textarea name="userMsg" placeholder="Mensaje" required > </textarea></span>
 						    </div>
 						   <div>
 						   		<input type="submit" value="Enviar"  class="mybutton">
@@ -236,16 +228,16 @@
          </div> 
     </div>
  </div>
-   <div class="footer">
+     <div class="footer">
    	  <div class="wrap">	
 			 <div class="copy_right">
-				<p>Copy rights (c). All rights Reseverd | Template by  <a href="http://w3layouts.com" target="_blank">W3Layouts</a> </p>
+				<p>Copy rights (c). Todos los derechos reservados | Elaborado por: <a href="http://w3layouts.com" target="_blank">iscon</a> </p>
 		   </div>	
 		   <div class="footer-nav">
 		   	<ul>
-		   		<li><a href="#">Terms of Use</a> : </li>
-		   		<li><a href="#">Privacy Policy</a> : </li>
-		   		<li><a href="#">Contact Us</a> : </li>
+		   		<li><a href="#">Terminos de uso</a> : </li>
+		   		<li><a href="#">Politicas Privadas</a> : </li>
+		   		<li><a href={{URL::to('/contacto')}}>Contactanos</a> : </li>
 		   		<li><a href="#">Sitemap</a></li>
 		   	</ul>
 		   </div>		

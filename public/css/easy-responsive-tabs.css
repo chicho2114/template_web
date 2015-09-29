@@ -19,7 +19,7 @@
 	text-shadow:0px 1px 0px rgba(255, 255, 255, 0.6);
 }
 .resp-tabs-list li:hover {
-	color: #E4292F;
+	color: #AE32B5;
 }
 .resp-tabs-container {
 	padding: 0px;
@@ -44,7 +44,7 @@ h2.resp-accordion {
 .resp-tab-active {
 	border-bottom: none;
 	background: #fff;
-	color:#E4292F;
+	color:#AE32B5;
 }
 .resp-content-active, .resp-accordion-active {
    display: block;

@@ -16,7 +16,9 @@ class FrontController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $products = \Tienda\Producto::All();
+
+        return view('index', compact('products'));
     }
 
     public function contacto()
@@ -38,6 +40,16 @@ class FrontController extends Controller
     public function contenido()
     {
         return view('contenido');
+    }
+    
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function indexAdmin()
+    {
+        return view('administracion');
     }
     /**
      * Show the form for creating a new resource.

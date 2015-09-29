@@ -19,5 +19,11 @@ Route::get('/contenido', 'FrontController@contenido');
 
 Route::get('/prueba', 'FrontController@prueba');
 
+//ruta de administracion
+Route::get('/admin', 'FrontController@indexAdmin');
+
+Route::resource('/admin/users', 'UserController');
+
 //rutas mas generales
-Route::resource('productos', 'ProductosController');
+Route::resource('/admin/product', 'ProductosController');
+

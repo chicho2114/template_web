@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Free Ecomm Template Website Template | Preview :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script> 
 <script src="js/jquery.openCarousel.js" type="text/javascript"></script>
@@ -55,7 +55,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 						<div class="header_top_right">
 							  <div class="search_box">
-							  	<span>Search</span>
+							  	<span>Buscar:</span>
 					     		<form>
 					     			<input type="text" value=""><input type="submit" value="">
 					     		</form>
@@ -68,7 +68,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   		    	<a class="toggleMenu" href="#">Menu</a>
 					<ul class="nav">
 						<li>
-							<a href={{URL::to('/')}}>Home</a>
+							<a href={{URL::to('/')}}>Inicio</a>
 						</li>
 						<li  class="test">
 							<a href="#">Appliances</a>
@@ -140,33 +140,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</ul>
 						</li>
 						<li>
-							<a href="#">Home & Garden</a>
-							<ul>
-								<li>
-									<a href="#">Home Furnishing</a>
-									<ul>
-										<li><a href="#">Bed</a></li>
-										<li><a href="#">Bath</a></li>
-										<li><a href="#">Kitchen</a></li>
-										<li><a href="#">Living</a></li>
-										
-									</ul>
-								</li>
-								<li>
-									<a href="#">Home Decor</a>
-									<ul>
-										<li><a href="#">Flowers & Plants</a></li>
-										<li><a href="#">Home Fragrances</a></li>
-										<li><a href="#">Spiritual Decor</a></li>
-										<li><a href="#">Wall Decor</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Gardening Tools</a>
-								</li>
-							</ul>
-						</li>
-						<li>
 							<a href="#">Office Supplies</a>
 							<ul>
 								<li>
@@ -235,7 +208,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</ul>
 						</li>
 						<li>
-							<a href="contact.html">Contact Us</a>
+							<a href={{URL::to('/contacto')}}>Contactanos</a>
 						</li>
 					</ul>
 					 <span class="left-ribbon"> </span> 
@@ -250,9 +223,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    	 	       <div class="section group">
 				<div class="cont-desc span_1_of_2">
 					<ul class="back-links">
-						<li><a href="#">Home</a> ::</li>
-						<li><a href="#">Product Page</a> ::</li>
-						<li>Product Name</li>
+						<li><a href={{URL::to('/')}}>Inicio</a> ::</li>
+						<li><a href="#">Categoria del producto</a> ::</li>
+						<li>Detalles del producto</li>
 						<div class="clear"> </div>
 					</ul>
 				  <div class="product-details">	
@@ -282,7 +255,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h2>Whirlpool LTE5243D 3.4 CuFt.... </h2>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>					
 					<div class="price">
-						<p>Price: <span>$839.93</span></p>
+						<p>Precio: <span>$839.93</span></p>
 					</div>
 					<div class="available">
 						<ul>
@@ -295,15 +268,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="share">
 						<p>Number of units :</p><input type="number" class="text_box" type="text" value="1" min="1" />				
 					</div>
-					<div class="button"><span><a href="#">Add to Cart</a></span></div>					
+					<div class="button"><span><a href="#">Ver en Mercado libre</a></span></div>					
 					<div class="clear"></div>
 				</div>
-				 <div class="wish-list">
-				 	<ul>
-				 		<li class="wish"><a href="#">Add to Wishlist</a></li>
-				 	    <li class="compare"><a href="#">Add to Compare</a></li>
-				 	</ul>
-				 </div>
 				 <div class="colors-share">
 				 	<div class="color-types">
 				 		<h4>Available Colors</h4>
@@ -334,7 +301,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="product_desc">	
 			<div id="horizontalTab">
 				<ul class="resp-tabs-list">
-					<li>Specifications</li>
+					<li>Especificaciones</li>
 					<li>product Tags</li>
 					<li>Product Reviews</li>
 					<div class="clear"></div>
@@ -405,7 +372,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    </div>
       </div>
 				   <div class="rightsidebar span_3_of_1 sidebar">
-					<h3>Popular Products</h3>
+					<h3>Productos Populares</h3>
 					<ul class="popular-products">
 						<li>
 							 <h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
@@ -488,7 +455,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    	 		</div>
    	 		<div class="content_top">
     	        	<div class="wrap">
-		          	   <h3>Recently Viewed</h3>
+		          	   <h3>Añadidos recientemente</h3>
 		          	</div>
 		          	<div class="line"> </div>
 		          	<div class="wrap">
@@ -521,13 +488,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
      <div class="footer">
    	  <div class="wrap">	
 			 <div class="copy_right">
-				<p>Copy rights (c). All rights Reseverd | Template by  <a href="http://w3layouts.com" target="_blank">W3Layouts</a> </p>
+				<p>Copy rights (c). Todos los derechos reservados | Elaborado por: <a href="http://w3layouts.com" target="_blank">iscon</a> </p>
 		   </div>	
 		   <div class="footer-nav">
 		   	<ul>
-		   		<li><a href="#">Terms of Use</a> : </li>
-		   		<li><a href="#">Privacy Policy</a> : </li>
-		   		<li><a href="contact.html">Contact Us</a> : </li>
+		   		<li><a href="#">Terminos de uso</a> : </li>
+		   		<li><a href="#">Politicas Privadas</a> : </li>
+		   		<li><a href={{URL::to('/contacto')}}>Contactanos</a> : </li>
 		   		<li><a href="#">Sitemap</a></li>
 		   	</ul>
 		   </div>		

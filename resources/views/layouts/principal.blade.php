@@ -9,8 +9,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Free Ecomm Template Website Template | Home :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+{!!Html::style('css/style.css')!!}
+<!--{!!Html::style('http://fonts.googleapis.com/css?family=Ubuntu+Condensed')!!}-->
+{!!Html::script('js/jquery.openCarousel.js')!!}
+{!!Html::script('js/jquery-1.9.0.min.js')!!}
+{!!Html::script('js/easing.js')!!}
+{!!Html::script('js/move-top.js')!!}
+
+
+
+<!--<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>-->
 <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script> 
 <script src="js/jquery.openCarousel.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -21,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   	  		<div class="wrap">
 				<div class="header_top">
 					<div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt="" /></a>
+						<a href={{URL::to('/')}}><img src="images/logo.png" alt="" /></a>
 					</div>
 						<div class="header_top_right">
 							  <div class="search_box">
@@ -37,7 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   		    <div class="navigation">
   		    	<a class="toggleMenu" href="#">Menu</a>
 					<ul class="nav">
-					  <li> <a href="index.html">Inicio</a></li>
+					  <li> <a href={{URL::to('/')}}>Inicio</a></li>
 					  <li  class="test">
 							<a href="#">Appliances</a>
 							<ul>
@@ -134,7 +143,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</li>
 							</ul>
 						</li>
-						<li>
+						<!--<li>
 							<a href="#">Office Supplies</a>
 							<ul>
 								<li>
@@ -162,7 +171,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</li>
 								
 							</ul>
-						</li>
+						</li>-->
 						<li>
 							<a href="#">Sports Equipment</a>
 							<ul>
@@ -213,7 +222,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   <div class="slider-text">
 			   	<h2>Lorem Ipsum Placerat <br/>Elementum Quistue Tunulla Maris</h2>
 			   	<p>Vivamus vitae augue at quam frigilla tristique sit amet<br/> acin ante sikumpre tisdin.</p>
-			   	<a href="#">Sitamet Tortorions</a>
+			   	<a href={{URL::to('/productos/create')}}>Agregar productos</a>
 	  	      </div>
 	  	      <div class="slider-img">
 	  	      	<img src="images/slider-img.png" alt="" />
@@ -303,16 +312,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
          </div>
       </div>
     </div>
-   <div class="footer">
+     <div class="footer">
    	  <div class="wrap">	
 			 <div class="copy_right">
-				<p>Copy rights (c). All rights Reseverd | Template by  <a href="http://w3layouts.com" target="_blank">W3Layouts</a> </p>
+				<p>Copy rights (c). Todos los derechos reservados | Elaborado por: <a href="http://w3layouts.com" target="_blank">iscon</a> </p>
 		   </div>	
 		   <div class="footer-nav">
 		   	<ul>
-		   		<li><a href="#">Terms of Use</a> : </li>
-		   		<li><a href="#">Privacy Policy</a> : </li>
-		   		<li><a href="contact.html">Contact Us</a> : </li>
+		   		<li><a href="#">Terminos de uso</a> : </li>
+		   		<li><a href="#">Politicas Privadas</a> : </li>
+		   		<li><a href={{URL::to('/contacto')}}>Contactanos</a> : </li>
 		   		<li><a href="#">Sitemap</a></li>
 		   	</ul>
 		   </div>		
@@ -325,7 +334,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		});
 	</script>
     <a href="#" id="toTop"> </a>
-    <script type="text/javascript" src="js/navigation.js"></script>
+   <!-- <script type="text/javascript" src="js/navigation.js"></script>
+    -->{!!Html::script('js/navigation.js')!!}
 </body>
 </html>
 
