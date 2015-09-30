@@ -19,7 +19,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = \Tienda\User::All();
+        $users = \Tienda\User::paginate(8);
         return view('users.index', compact('users'));
     }
 
