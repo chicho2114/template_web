@@ -30,7 +30,8 @@
         <div class="col-lg-12">
         <div class="col-lg-4"></div>
         <div class="col-lg-6">  
-        <div class="panel-body form-horizontal payment-form">                  
+        <div class="panel-body form-horizontal payment-form">    
+        @include('alerts.request')              
             <!--<form method="POST" action={{URL::to('admin.store')}}>
 			    <h2>Datos del usuario:</h2>
 			    <input type="hidden" name="opcion" id="opcion" value="crear" />

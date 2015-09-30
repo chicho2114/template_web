@@ -31,6 +31,8 @@
 
 @endif
 
+@include('alerts.request')
+
 <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< COMIENZA DONDE VA EL CONTENIDO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 <div class="row">
     <div class="col-lg-12"> 

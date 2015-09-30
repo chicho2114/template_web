@@ -4,6 +4,8 @@ namespace Tienda\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Tienda\Http\Requests;
+use Tienda\Http\Requests\UserCreateRequest;
+use Tienda\Http\Requests\UserUpdateRequest;
 use Tienda\Http\Controllers\Controller;
 use Session;
 use Redirect;
@@ -37,7 +39,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserCreateRequest $request)
     {
         \Tienda\User::create([
         'name' => $request['name'],
@@ -83,7 +85,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserUpdateRequest $request, $id)
     {
         $user = \Tienda\User::find($id);
         $user->fill($request->all());

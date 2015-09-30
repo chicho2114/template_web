@@ -30,7 +30,8 @@
         <div class="col-lg-12">
         <div class="col-lg-4"></div>
         <div class="col-lg-6">  
-        <div class="panel-body form-horizontal payment-form">                  
+        <div class="panel-body form-horizontal payment-form">  
+        @include('alerts.request')                 
 
 
 		{!! Form::model($user, ['route'=> ['admin.users.update', $user->id], 'method'=>'PUT']) !!}
