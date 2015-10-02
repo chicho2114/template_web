@@ -130,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="modificar_materia.php">
+                <a href={{URL::to('/admin/product/create')}}>
                     <div class="panel-footer">
                         <span class="pull-left">Ver en detalle</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="modificar_materia.php">
+                <a href={{URL::to('/admin/product/edit')}}>
                     <div class="panel-footer">
                         <span class="pull-left">Ver en detalle</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -176,7 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="modificar_grupo.php">
+                <a href={{URL::to('/admin/product/')}}>
                     <div class="panel-footer">
                         <span class="pull-left">Ver en detalle</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

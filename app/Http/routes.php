@@ -27,3 +27,7 @@ Route::resource('/admin/users', 'UserController');
 //rutas mas generales
 Route::resource('/admin/product', 'ProductosController');
 
+//Autentificacion de usuario
+Route::resource('/log', 'LogController');
+Route::get('/logout', 'LogController@logout');
+

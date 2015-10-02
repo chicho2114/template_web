@@ -4,17 +4,14 @@ namespace Tienda\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Tienda\Http\Requests;
-use Tienda\Http\Requests\UserCreateRequest;
-use Tienda\Http\Requests\UserUpdateRequest;
+use Tienda\Http\Requests\LoginRequest;
 use Tienda\Http\Controllers\Controller;
+use Auth;
 use Session;
 use Redirect;
 
-class UserController extends Controller
+class LogController extends Controller
 {
-    public function __construct(){
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -22,8 +19,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = \Tienda\User::paginate(8);
-        return view('users.index', compact('users'));
+        return view('login');
     }
 
     /**
@@ -33,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.crear_usuario');
+        //
     }
 
     /**
@@ -42,20 +38,24 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UserCreateRequest $request)
+    public function store(LoginRequest $request)
     {
-        \Tienda\User::create([
-        'name' => $request['name'],
-        'apellido' => $request['apellido'],
-        'email' => $request['email'],
-        'password' => bcrypt($request['password']), //bcrypt() <--- esto para encriptar contraseñas
+        //return $request->email . " ". $request->password;
+        if (Auth::attempt(['email' => $request['email'], 'password' => $request['password']])) {
 
+            return Redirect::to('/admin');
+        }
+        else{
+            Session::flash('message-error', 'Alguno de los datos son incorrectos.');
+            return Redirect::to('/log');
+        }
+    }
 
-        ]);
+    public function logout(){
+        Auth::logout();
 
-        Session::flash('message', 'Usuario registrado correctamente.');
+        return Redirect::to('/log');
 
-        return Redirect::to('/admin/users');
     }
 
     /**
@@ -66,7 +66,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**
@@ -77,8 +77,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = \Tienda\User::find($id);
-        return view('users.editar_usuario', ['user'=>$user]);
+        //
     }
 
     /**
@@ -88,16 +87,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserUpdateRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $request['password'] = bcrypt($request['password']);
-        $user = \Tienda\User::find($id);
-        $user->fill($request->all());
-        $user->save();
-
-        Session::flash('message', 'Usuario editado correctamente.');
-
-        return Redirect::to('/admin/users');
+        //
     }
 
     /**
@@ -108,10 +100,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        \Tienda\User::destroy($id);
-
-        Session::flash('message', 'Usuario eliminado correctamente.');
-
-        return Redirect::to('/admin/users');
+        //
     }
 }

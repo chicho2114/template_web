@@ -4,27 +4,27 @@
 
 <div class="content-bottom-right">
     	    	  <h3>Todas las categorias</h3>
-    	    	  
+    	    	  <div class="clear"></div>
     	    	  <div class="section group">
-    	    	  @foreach($products as $product)
-				  <div class="grid_1_of_4 images_1_of_4">
-					 <h4><a href={{URL::to('/preview')}}>{{$product->titulo}}</a></h4>
-					  <a href={{URL::to('/preview')}}><img src="images/product-img1.jpg" alt="" /></a>
-					  <div class="price-details">
-				       <div class="price-number">
-							<p><span class="rupees">Bs: {{$product->precio}}</span></p>
-					    </div>
-					       		<div class="add-cart">								
-									<h4><a href={{URL::to('/preview')}}>More Info</a></h4>
-							     </div>
-							 <div class="clear"></div>
-					</div>					 
-				</div>
+    	    	  	@foreach($products as $product)
+					  <div class="grid_1_of_4 images_1_of_4">
+						 <h4><a href={{URL::to('/preview')}}>{{$product->titulo}}</a></h4>
+						  <a href={{URL::to('/preview')}}><img src="images/product-img1.jpg" alt="" /></a>
+						  <div class="price-details">
+					       <div class="price-number">
+								<p><span class="rupees">Bs: {{$product->precio}}</span></p>
+						    </div>
+						       		<div class="add-cart">								
+										<h4><a href={{URL::to('/preview')}}>More Info</a></h4>
+								     </div>
+								 <div class="clear"></div>
+						</div>					 
+					</div>
 				
-			   @endforeach
-				</div>
+			   		@endforeach
+				  </div>
 				
-			   <div class="section group">
+			  <!-- <div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
 					 <h4><a href={{URL::to('/preview')}}>Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
 					  <a href={{URL::to('/preview')}}><img src="images/product-img1.jpg" alt="" /></a>
@@ -79,63 +79,8 @@
 							 <div class="clear"></div>
 					</div>
 				 </div>
-			   </div>
-			   <div class="section group">
-				<div class="grid_1_of_4 images_1_of_4">
-					 <h4><a href={{URL::to('/preview')}}>Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
-					  <a href={{URL::to('/preview')}}><img src="images/product-img1.jpg" alt="" /></a>
-					  <div class="price-details">
-				       <div class="price-number">
-							<p><span class="rupees">$839.93 </span></p>
-					    </div>
-					       		<div class="add-cart">								
-									<h4><a href={{URL::to('/preview')}}>More Info</a></h4>
-							     </div>
-							 <div class="clear"></div>
-					</div>					 
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href={{URL::to('/preview')}}>Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
-					 <a href={{URL::to('/preview')}}><img src="images/product-img2.jpg" alt="" /></a>
-					<div class="price-details">
-				       <div class="price-number">
-							<p><span class="rupees">$839.93 </span></p>
-					    </div>
-					       		<div class="add-cart">								
-									<h4><a href={{URL::to('/preview')}}>More Info</a></h4>
-							     </div>
-							 <div class="clear"></div>
-					</div>
-					 
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href={{URL::to('/preview')}}>Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
-					<a href={{URL::to('/preview')}}><img src="images/product-img3.jpg" alt="" /></a>
-					<div class="price-details">
-				       <div class="price-number">
-							<p><span class="rupees">$839.93 </span></p>
-					    </div>
-					       		<div class="add-cart">								
-									<h4><a href={{URL::to('/preview')}}>More Info</a></h4>
-							     </div>
-							 <div class="clear"></div>
-					</div>
-				    
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href={{URL::to('/preview')}}>Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
-					<a href={{URL::to('/preview')}}><img src="images/product-img4.jpg" alt="" /></a>
-					 <div class="price-details">
-				       <div class="price-number">
-							<p><span class="rupees">$839.93 </span></p>
-					    </div>
-					       		<div class="add-cart">								
-									<h4><a href={{URL::to('/preview')}}>More Info</a></h4>
-							     </div>
-							 <div class="clear"></div>
-					</div>
-				 </div>
-			    </div>
+			   </div>-->
+
 			    <div class="product-articles">
 			      <h3>Browse All Categories</h3>
 			      <ul>

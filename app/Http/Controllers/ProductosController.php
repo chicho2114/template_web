@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 
 use Tienda\Http\Requests;
 use Tienda\Http\Controllers\Controller;
+use Session;
+use Redirect;
 
 class ProductosController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -49,7 +54,9 @@ class ProductosController extends Controller
 
 
             ]);
-        return "Producto registrado con exito";
+        Session::flash('message', 'Producto creado correctamente.');
+
+        return Redirect::to('/admin/product');
     }
 
     /**

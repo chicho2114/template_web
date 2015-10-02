@@ -8,20 +8,22 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Lista de usuarios
+            Lista de productos
         </h1>
         <ol class="breadcrumb">
                 <li >
                      <a href={{URL::to('/admin/')}}><i class="fa fa-fw fa-file-text-o"></i>  Inicio </a>
                 </li>
                <li class="active">
-                     <i class="fa  "></i>Lista de usuarios
+                     <i class="fa  "></i>Lista de productos
                 </li>
         </ol>
     </div>
 </div>
 <!-- /.row -->
 <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FINAL CONTENIDO DE LA CABECERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+@include('alerts.success')
 
 <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< COMIENZA DONDE VA EL CONTENIDO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 <div class="row">
