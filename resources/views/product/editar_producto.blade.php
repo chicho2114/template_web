@@ -31,32 +31,36 @@
         <div class="col-lg-4"></div>
         <div class="col-lg-6">  
         <div class="panel-body form-horizontal payment-form">   
-        {!! Form::open(['route'=>'admin.product.store', 'method'=>'POST', 'files' => true]) !!}               
+        @include('alerts.request')                 
+
+
+        {!! Form::model($product, ['route'=> ['admin.product.update', $product->id], 'method'=>'PUT', 'files'=>true]) !!}              
             @include('product.forms.product')
+
             <div class="form-group">
-
+                        
                 <div class="col-sm-12 text-right">
-                    <button type="reset" class="btn btn-info preview-edit-button">
-                        <span class="fa fa-fw fa-refresh"></span> Limpiar
-                    </button>
+                    <a href={{URL::to('/admin/product')}}>
+                        <button type="" class="btn btn-info preview-edit-button">
+                            <span class="fa fa-fw fa-check"></span> Cancelar
+                        </button>
+                    </a>
                     <button type="submit" class="btn btn-success preview-edit-button">
-                        <span class="fa fa-fw fa-check"></span> Crear
+                        <span class="fa fa-fw fa-check"></span> Actualizar
                     </button>
                 </div>
-
             </div>
-
+             
         {!! Form::close() !!}
-
+        {!! Form::open(['route'=> ['admin.product.destroy', $product->id], 'method'=>'DELETE']) !!}
         <div class="form-group">
-                <a href={{URL::to('admin/product')}}><div class="col-sm-12 text-right">
-                    <button type="submit" class="btn btn-default preview-edit-button">
-                        <span class="glyphicon glyphicon-remove"></span> Cancelar
+                <div class="col-sm-12 text-right">
+                    <button type="submit" class="btn btn-danger preview-edit-button">
+                        <span class="glyphicon glyphicon-remove"></span> Eliminar
                     </button>
                 </div>
-                </a>
         </div>
-        
+        {!! Form::close() !!}
         </div>
         </div>
         </div>

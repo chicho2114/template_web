@@ -21,7 +21,7 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        $products = \Tienda\Producto::All();
+        $products = \Tienda\Producto::paginate(10);
 
         return view('product.index', compact('products'));
     }
@@ -47,13 +47,7 @@ class ProductosController extends Controller
     {
 
         //'titulo', 'descripcion', 'precio'
-        \Tienda\Producto::create([
-            'titulo' => $request['titulo'],
-            'descripcion' => $request['descripcion'],
-            'precio' => $request['precio'], 
-
-
-            ]);
+        \Tienda\Producto::create($request->all());
         Session::flash('message', 'Producto creado correctamente.');
 
         return Redirect::to('/admin/product');
@@ -78,8 +72,8 @@ class ProductosController extends Controller
      */
     public function edit($id)
     {
-        
-        return 'Estoy en el index';
+        $product = \Tienda\Producto::find($id);
+        return view('product.editar_producto', ['product'=>$product]);
     }
 
     /**
@@ -91,7 +85,13 @@ class ProductosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = \Tienda\Producto::find($id);
+        $product->fill($request->all());
+        $product->save();
+
+        Session::flash('message', 'Producto editado correctamente.');
+
+        return Redirect::to('/admin/product');
     }
 
     /**
@@ -102,6 +102,14 @@ class ProductosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = \Tienda\Producto::find($id);
+        \Storage::delete($product->imagenes);
+        \Tienda\Producto::destroy($id);
+
+
+
+        Session::flash('message', 'Producto eliminado correctamente.');
+
+        return Redirect::to('/admin/product');
     }
 }

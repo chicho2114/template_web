@@ -9,13 +9,13 @@
     	    	  	@foreach($products as $product)
 					  <div class="grid_1_of_4 images_1_of_4">
 						 <h4><a href={{URL::to('/preview')}}>{{$product->titulo}}</a></h4>
-						  <a href={{URL::to('/preview')}}><img src="images/product-img1.jpg" alt="" /></a>
+						  <a href={{URL::to('/preview')}}><img src='images/{{$product->imagenes}}' height="100" /></a>
 						  <div class="price-details">
 					       <div class="price-number">
 								<p><span class="rupees">Bs: {{$product->precio}}</span></p>
 						    </div>
 						       		<div class="add-cart">								
-										<h4><a href={{URL::to('/preview')}}>More Info</a></h4>
+										<h4>{!!link_to_route('show', $title = 'Ver detalles', $parameters = $product->id, $attributes = ['class'=>'btn btn-info preview-add-button'])!!}</h4>
 								     </div>
 								 <div class="clear"></div>
 						</div>					 

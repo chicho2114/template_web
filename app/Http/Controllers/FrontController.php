@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Tienda\Http\Requests;
 use Tienda\Http\Controllers\Controller;
+use Session;
 
 class FrontController extends Controller
 {
@@ -36,8 +37,7 @@ class FrontController extends Controller
     }
 
     public function preview()
-    {
-        return view('preview');
+    {   
     }
 
 
@@ -84,7 +84,8 @@ class FrontController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = \Tienda\Producto::find($id);
+        return view('preview', ['product'=>$product]);
     }
 
     /**

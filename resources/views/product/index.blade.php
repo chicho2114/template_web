@@ -49,17 +49,8 @@
             <td>{{$product->created_at}}</td>
 
         <td>
-            <form method="POST" action="modificar_grupo.php">
-                <input type="hidden" name="opcion" id="opcion" value="eliminar">
-                <input type="hidden" name="id_grupo" id="id_grupo" value="">
-
-                <button type="submit" class="btn btn-info preview-add-button">
-                    <span class="glyphicon glyphicon-remove"></span> Editar
-                </button>
-                <button type="submit" class="btn btn-danger preview-add-button">
-                    <span class="glyphicon glyphicon-remove"></span> Eliminar
-                </button>
-            </form>
+            {!!link_to_route('admin.product.edit', $title = 'Editar', $parameters = $product->id, $attributes = ['class'=>'btn btn-info preview-add-button'])!!}
+            {!!link_to_action('ProductosController@destroy', $title = 'Eliminar', $parameters = $product->id, $attributes = ['class'=>'btn btn-danger preview-add-button', 'method'=>'DELETE'])!!}
         </td>
         </tr>
 
@@ -69,7 +60,7 @@
         @endforeach
 </table>
 
-       
+{!! $products->render() !!}
         
          
     </div>

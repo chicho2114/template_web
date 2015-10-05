@@ -8,23 +8,20 @@
 | Here is where you can register all of the routes for an application.
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
-|
+|['as' => 'preview', 'uses' =>
 */
-
-Route::get('/', 'FrontController@index');
-
+//Rutas de la tienda
+Route::resource('/', 'FrontController');
 Route::get('/contacto', 'FrontController@contacto');
-Route::get('/preview', 'FrontController@preview');
 Route::get('/contenido', 'FrontController@contenido');
-
 Route::get('/prueba', 'FrontController@prueba');
 
-//ruta de administracion
+
+//Rutas de administracion
 Route::get('/admin', 'FrontController@indexAdmin');
 
 Route::resource('/admin/users', 'UserController');
 
-//rutas mas generales
 Route::resource('/admin/product', 'ProductosController');
 
 //Autentificacion de usuario
