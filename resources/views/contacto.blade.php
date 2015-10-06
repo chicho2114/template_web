@@ -207,22 +207,38 @@
       				</div>
 				  <div class="contact-form">
 				  	<h3>Contactanos</h3>
-					    <form method="post" action="contact-post.html">
+				  		@if(Session::has('message'))
+
+					  		<script type="text/javascript">
+
+						  		function mensaje(){
+						  			window.alert("Mensaje enviado satisfactoriamente");
+						  		}
+
+						  		mensaje();
+					  		
+					  		</script>
+				  		@endif
+						
+				  		{!! Form::open(['route'=>'store', 'method'=>'POST']) !!}
+					    
 					    	<div>
-						    	<input name="userName" type="text" class="textbox textbox1" required placeholder="Nombre y Apellido..."  >
-						    	<input name="userEmail" type="text" class="textbox" placeholder="Correo..." required >
-						    	<input name="usersubject" type="text" class="textbox" required placeholder="Asunto..." >
+					    		{!!Form::text('nombre', null, ['class'=>'textbox textbox1', 'required', 'placeholder'=> 'Nombre y Apellido...'])!!}
+					    		{!!Form::text('email', null, ['class'=>'textbox', 'required', 'placeholder'=> 'Correo...'])!!}
+					    		{!!Form::text('asunto', null, ['class'=>'textbox', 'required', 'placeholder'=> 'Asunto...'])!!}
 						    	<div class="clear"></div>
 						    </div>
 						    <div>
 						    	<!--<input name="userMsg" type="textarea" required placeholder="Mensaje..."  >-->
-						    	<span><textarea name="userMsg" placeholder="Mensaje" required > </textarea></span>
+						    	{!!Form::textarea('mensaje', null, ['required', 'placeholder'=> 'Mensaje...'])!!}
+						    	<!--<span><textarea name="userMsg" placeholder="Mensaje" required > </textarea></span>-->
 						    </div>
 						   <div>
 						   		<input type="submit" value="Enviar"  class="mybutton">
 						   		<div class="clear"></div>
 						  </div>
-					    </form>
+					    
+					    {!!Form::close()!!}
 				  </div>
 			  </div>		
          </div> 

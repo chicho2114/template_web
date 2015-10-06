@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Tienda\Http\Requests;
 use Tienda\Http\Controllers\Controller;
 use Session;
+use Mail;
+use Redirect;
 
 class FrontController extends Controller
 {
@@ -43,7 +45,7 @@ class FrontController extends Controller
 
     public function contenido()
     {
-        return view('contenido');
+        return view('layouts.principal');
     }
     
     /**
@@ -73,7 +75,12 @@ class FrontController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Mail::send('correo', $request->all(), function($message){
+            $message->to('argenis1493@gmail.com');
+            $message->subject('Correo de contacto');
+        });
+        Session::flash('message', 'Mensaje enviado correctamente');
+        return Redirect::to('/contacto');
     }
 
     /**

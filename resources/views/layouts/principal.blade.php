@@ -18,6 +18,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
+
 <!--<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>-->
 <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script> 
@@ -245,9 +246,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		          	 <div class="ocarousel_slider">  
 	      				<div class="ocarousel example_photos" data-ocarousel-perscroll="3">
 			                <div class="ocarousel_window">
+			           		@if(!empty($products))
 			                @foreach($products as $product)
 			                   <a href="#" title="img1"> <img src='images/{{$product->imagenes}}' height="100" /><p>{{$product->titulo}}</p></a>
 			                @endforeach
+			                @endif
 			                </div>
 			               <span>           
 			                <a href="#" data-ocarousel-link="left" style="float: left;" class="prev"> </a>
