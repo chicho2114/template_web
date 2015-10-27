@@ -23,7 +23,7 @@ class FrontController extends Controller
      */
     public function index()
     {
-        $products = \Tienda\Producto::All();
+        $products = \Tienda\Producto::paginate(12);
 
         return view('index', compact('products'));
     }
@@ -40,6 +40,7 @@ class FrontController extends Controller
 
     public function preview()
     {   
+        return view('preview');
     }
 
 

@@ -43,8 +43,8 @@
 
     <div class="container">
         <div class="row">
-        <div class="col-md-6 ">
-            <center><h2>Titulo</h2></center>
+        <div class="col-md-4 col-md-offset-4">
+            <center><h2>Portal de Administración</h2></center>
         </div>
 
                     <div class="col-md-4 col-md-offset-4">

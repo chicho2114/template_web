@@ -15,7 +15,7 @@
 								<p><span class="rupees">Bs: {{$product->precio}}</span></p>
 						    </div>
 						       		<div class="add-cart">								
-										<h4>{!!link_to_route('show', $title = 'Ver detalles', $parameters = $product->id, $attributes = ['class'=>'btn btn-info preview-add-button'])!!}</h4>
+										<h4><a href={{URL::to('/preview')}}>Ver detalles</a></h4>
 								     </div>
 								 <div class="clear"></div>
 						</div>					 
@@ -23,6 +23,7 @@
 				
 			   		@endforeach
 				  </div>
+				  {!! $products->render() !!}
 				
 			  <!-- <div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">

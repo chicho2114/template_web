@@ -15,6 +15,7 @@ Route::resource('/', 'FrontController');
 Route::get('/contacto', 'FrontController@contacto');
 Route::get('/contenido', 'FrontController@contenido');
 Route::get('/prueba', 'FrontController@prueba');
+Route::get('/preview', 'FrontController@preview');
 
 
 //Rutas de administracion
